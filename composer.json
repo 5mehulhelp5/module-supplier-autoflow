@@ -1,8 +1,8 @@
 {
     "name": "etechflow/module-supplier-autoflow",
-    "description": "Magento 2 module that auto-toggles supplier active flags based on stock and reprices products from the first-active supplier's cost × markup. Built for stores with multi-supplier products and dynamic supplier-driven pricing. Pairs cleanly with ETechFlow Next Day Eligibility — when a supplier flips, NDE re-evaluates next-day eligibility automatically.",
+    "description": "Magento 2 module that auto-toggles supplier active flags based on stock and reprices products from the first-active supplier's cost \u00d7 markup. Built for stores with multi-supplier products and dynamic supplier-driven pricing. Pairs cleanly with ETechFlow Next Day Eligibility \u2014 when a supplier flips, NDE re-evaluates next-day eligibility automatically.",
     "type": "magento2-module",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "license": "proprietary",
     "authors": [
         {
@@ -28,8 +28,8 @@
         "magento/module-cron": "^100.4||^101.0"
     },
     "suggest": {
-        "etechflow/module-next-day-eligibility": "When installed, Autoflow's supplier active-flag changes automatically trigger NDE to recompute next_day_eligible — keeps shipping eligibility in sync with the supplier that's actually fulfilling the order.",
-        "magento/module-inventory-api": "When MSI is enabled, Autoflow can use per-source stock as the auto-toggle trigger. Soft-detected — module installs and works without MSI."
+        "etechflow/module-next-day-eligibility": "When installed, Autoflow's supplier active-flag changes automatically trigger NDE to recompute next_day_eligible \u2014 keeps shipping eligibility in sync with the supplier that's actually fulfilling the order.",
+        "magento/module-inventory-api": "When MSI is enabled, Autoflow can use per-source stock as the auto-toggle trigger. Soft-detected \u2014 module installs and works without MSI."
     },
     "autoload": {
         "psr-4": {

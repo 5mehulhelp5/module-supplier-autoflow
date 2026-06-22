@@ -45,7 +45,7 @@ class LicenseValidator
     public const XML_PATH_BUNDLE_LICENSE_KEY = 'etechflow_bundle/license/license_key';
 
     // portal
-    private const DEFAULT_PORTAL_URL   = 'https://nonanarchically-rambunctious-lashay.ngrok-free.dev/license/validate';
+    private const DEFAULT_PORTAL_URL   = 'https://license-service.etechflow.com/license/validate';
     public  const PORTAL_CACHE_TTL     = 30;   // valid result cache (s) — suspensions apply within this window
     public  const PORTAL_CACHE_TTL_BAD = 60;   // invalid result cache (s) — re-check quickly after re-activation
 
@@ -89,12 +89,6 @@ class LicenseValidator
         $host = $this->getCurrentHost();
         if ($host === '') {
             return false;
-        }
-        if (!$this->isProductionEnvironment()) {
-            return true;
-        }
-        if ($this->isDevelopmentHost($host)) {
-            return true;
         }
         return $this->checkKey($host);
     }
